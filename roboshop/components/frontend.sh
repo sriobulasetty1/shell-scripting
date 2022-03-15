@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER_UD=$(id -u)
-if [ $? -eq 0 ]; then
+if [ $USER_ID -eq 0 ]; then
    echo SUCCESS
   else
     echo FAILURE
@@ -19,9 +19,11 @@ StatCheck() {
     echo SUCCESS
     else
       echo FAILURE
-      exit 1
+      exit 2
       fi
       }
+
+
 echo -e "\e[36m Installing nginx \e[0m"
 yum install nginx -y
 StatCheck $?
