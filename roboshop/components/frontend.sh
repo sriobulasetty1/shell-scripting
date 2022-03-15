@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER_UD=$(id -u)
-if [ $USER_ID -ne 0 ]; then
+if [ $USER_ID -eq 0 ]; then
    echo you should run as root
    ecit 1
 fi
