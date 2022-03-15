@@ -5,14 +5,7 @@ if [ $USER_ID -ne 0 ]; then
    echo SUCCESS
   else
     echo FAILURE
-   exit 1
-fi
-
-#Function
-Print_message() {
-  echo Hello
-  }
-Print_message
+  fi
 
 StatCheck() {
   if [ $1 -eq 0];then
