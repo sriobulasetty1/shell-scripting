@@ -3,8 +3,7 @@
 USER_UD=$(id -u)
 if [ "$USER_ID" -ne 0 ]; then
    echo SUCCESS
-  else
-    echo FAILURE
+  exit 1
   fi
 
 StatCheck() {
