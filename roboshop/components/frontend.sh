@@ -20,7 +20,7 @@ yum install nginx -y >> $LOG_FILE
 StatCheck $?
 
 print "download"
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >> $LOG_FILE
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>> $LOG_FILE
 StatCheck $?
 
 print "cleanup"
@@ -28,6 +28,6 @@ rm -rf /usr/share/nginx/html/* && cd /usr/share/nginx/html && unzip /tmp/fronten
 StatCheck $?
 
 print "start"
-systemctl restart nginx
-systemctl enable nginx
+systemctl restart nginx &>> $LOG_FILE
+systemctl enable nginx $LOG_FILE
 StatCheck $?
