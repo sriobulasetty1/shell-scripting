@@ -24,10 +24,10 @@ curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/fron
 StatCheck $?
 
 print "cleanup"
-rm -rf /usr/share/nginx/html/* && cd /usr/share/nginx/html && unzip /tmp/frontend.zip && mv frontend-main/* . && mv static/* . && rm -rf frontend-main README.md && mv localhost.conf /etc/nginx/default.d/roboshop.conf
+rm -rf /usr/share/nginx/html/* && cd /usr/share/nginx/html && unzip /tmp/frontend.zip && mv frontend-main/* . && mv static/* . && rm -rf frontend-main README.md && mv localhost.conf /etc/nginx/default.d/roboshop.conf &>> $LOG_FILE
 StatCheck $?
 
 print "start"
-systemctl restart nginx &>> $LOG_FILE
-systemctl enable nginx $LOG_FILE
+systemctl restart nginx
+systemctl enable nginx
 StatCheck $?
