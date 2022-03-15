@@ -1,11 +1,5 @@
 #!/bin/bash
 
-USER_UD=$(id -u)
-if [ "$USER_ID" -eq 0 ]; then
-   echo SUCCESS
-  exit 0
-  fi
-
 StatCheck() {
   if [ "$1" -eq 0 ];then
     echo SUCCESS
