@@ -22,8 +22,6 @@ StatCheck() {
       exit 2
       fi
       }
-
-}
 echo -e "\e[36m Installing nginx \e[0m"
 yum install nginx -y
 StatCheck $?
