@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER_UD=$(id -u)
-if [ $? -ne 0 ]; then
+if [ $? -eq 0 ]; then
    echo SUCCESS
   else
     echo FAILURE
