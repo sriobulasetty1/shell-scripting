@@ -19,7 +19,7 @@ StatCheck() {
     echo SUCCESS
     else
       echo FAILURE
-      exit 2
+      exit 1
       fi
       }
 echo -e "\e[36m Installing nginx \e[0m"
