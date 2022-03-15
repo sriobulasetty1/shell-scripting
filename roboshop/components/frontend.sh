@@ -13,12 +13,13 @@ print() {
   echo -e "\e[36m $1 \e[0m"
 }
 
+LOG_FILE=/tmp/roboshop.log
 print "installing nginx"
-yum install nginx -y
+yum install nginx -y >> $LOG_FILE
 StatCheck $?
 
 print "download"
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >> $LOG_FILE
 StatCheck $?
 
 print "cleanup"
