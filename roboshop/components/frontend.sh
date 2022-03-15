@@ -25,13 +25,7 @@ curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/fron
 StatCheck $?
 
 echo -e "\e[36m Update nginx \e[0m"
-rm -rf /usr/share/nginx/html/*
-cd /usr/share/nginx/html/
-unzip /tmp/frontend.zip
-mv frontend-main/* .
-mv static/* .
-rm -rf frontend-main README.md
-mv localhost.conf /etc/nginx/default.d/roboshop.conf
+rm -rf /usr/share/nginx/html/* && cd /usr/share/nginx/html && unzip /tmp/frontend.zip && mv frontend-main/* . && mv static/* . && rm -rf frontend-main README.md && mv localhost.conf /etc/nginx/default.d/roboshop.conf
 StatCheck $?
 
 echo -e "\e[36m Restart nginx \e[0m"
