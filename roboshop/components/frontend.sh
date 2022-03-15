@@ -16,7 +16,7 @@ print() {
 
 LOG_FILE=/tmp/roboshop.log
 print "installing nginx"
-yum install nginx -y >> $LOG_FILE
+yum install nginx -y &>> $LOG_FILE
 StatCheck $?
 
 print "download"
