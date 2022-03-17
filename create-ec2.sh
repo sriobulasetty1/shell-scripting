@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "create instance with security group, instance spots...etc"
+
 if [ -z "$1" ]; then
   echo -e "Input Machine Name"
   exit 1
