@@ -13,7 +13,7 @@ PRIVATE_IP=${aws ec2 run-instances \
     --image-id ${AMI_ID} \
     --Instance-type t2.micro \
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Values=${COMPONENT}}]" \
-    --instance-market-options "MarketTypes=SpotOptions={$SpotInstanceType=presistent,InstanceInterruptionBehavior=stop}"\
+    --instance-market-options "MarketTypes=SpotOptions={$SpotInstanceType=persistent,InstanceInterruptionBehavior=stop}"\
     --security-group-ids ${SGID} \
     |jq '.Instances[].PrivateIpAddress'|sed-e 's/"//g'}
 
