@@ -1,7 +1,7 @@
 {
   "Comment": "CREATE/DELETE/UPSERT a record",
-  "Changes":[{
-  "Action": "CREATE",
+  "Changes": [{
+  "Action": "UPSERT",
   "RespirceRecordSet": {
     "Name": "COMPONENT.roboshop.internal",
     "Type": "A",
