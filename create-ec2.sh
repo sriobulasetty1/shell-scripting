@@ -5,6 +5,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+
 COMPONENT=$1
 ZONE_ID="Z10446201CHRBX2OFKX"
 
