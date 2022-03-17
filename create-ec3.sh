@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo " Creating instance with out security groups and spot instance"
 if [ -z "$1" ]; then
   echo -e "Input Machine name"
   exit 1
