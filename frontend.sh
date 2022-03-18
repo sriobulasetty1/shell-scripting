@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #we have to use source command because it has functions and other variables.
-source components/common.sh
+#source components/common.sh
 print "installing nginx"
 yum install nginx -y &>> $LOG_FILE
 StatCheck $?
