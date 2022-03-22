@@ -10,7 +10,7 @@
          msg: URL = {{URL}}
 
 
-- name: Task Variable
+- name: Play Book2
   hosts: all
   roles:
     -demo
