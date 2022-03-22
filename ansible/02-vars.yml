@@ -15,5 +15,5 @@
     URL: sample.notepad.com
   tasks:
     ansible.builtin.debug:
-    msg: URL = {{URL}}
+     msg: URL = {{URL}}
 
