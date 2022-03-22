@@ -10,7 +10,7 @@
          msg: URL = {{URL}}
 
 
-- name: Play Book2
+- name: Book2
   hosts: all
   roles:
     -demo
