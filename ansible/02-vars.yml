@@ -9,9 +9,6 @@
 # calling variable
          msg: URL = {{URL}}
 
-
-- name: Book2
-  hosts: all
   roles:
     -demo
   vars:
