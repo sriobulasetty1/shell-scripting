@@ -8,3 +8,12 @@
       ansible.builtin.debug:
 # calling variable
          msg: URL = {{URL}}
+
+- name: Task Variable
+  hosts: all
+  vars:
+    URL: sample.notepad.com
+  tasks:
+    ansible.builtin.debug:
+      msg: URL = {{URL}}
+
