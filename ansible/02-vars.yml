@@ -1,10 +1,10 @@
 - name: Play Book1
   hosts: all
-  #Defined variable
+# Defined variable
   vars:
     URL: play.example.com
   tasks:
     - name: print URL
         ansible.builtin.debug:
-#calling variable
+# calling variable
          msg: URL = {{URL}}
