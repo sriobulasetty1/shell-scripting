@@ -11,8 +11,6 @@
 
   roles:
     -demo
-  vars:
-    URL: sample.notepad.com
   tasks:
     - name: Print URL
       ansible.builtin.debug:
