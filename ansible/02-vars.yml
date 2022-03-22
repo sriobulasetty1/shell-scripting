@@ -9,6 +9,7 @@
 # calling variable
          msg: URL = {{URL}}
 
+
 - name: Task Variable
   hosts: all
   roles:
@@ -16,6 +17,7 @@
   vars:
     URL: sample.notepad.com
   tasks:
-   ansible.builtin.debug:
-     msg: URL = {{URL}}
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
 
