@@ -11,6 +11,8 @@
 
 - name: Task Variable
   hosts: all
+  roles:
+    -demo
   vars:
     URL: sample.notepad.com
   tasks:
