@@ -1,6 +1,8 @@
 #Jenkins  private IP address
 172.31.28.179
+
 192.168.0.[10-20]
+
 [ web servers]
 192.168.1.10
 192.168.2.20
