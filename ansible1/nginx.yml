@@ -1,0 +1,20 @@
+- name: Download nginx software
+  ansible.builtin.get_url:
+    url: curl -s -L "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
+    dest: /tmp/frontend.zip
+    mode: '0440'
+
+- name: Install nginx
+  ansible.builtin.yum:
+    name: nginx
+    state: installed
+
+- name: Enable and start Ngnix
+  ansible.builtin.systemd:
+    name: nginx
+    state: started
+
+- name: Enable and start Ngnix
+  ansible.builtin.systemd:
+    name: nginx
+    state: enabled
