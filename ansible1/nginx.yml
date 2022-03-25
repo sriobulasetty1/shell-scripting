@@ -1,4 +1,5 @@
 - name: Download nginx software
+  hosts: all
   ansible.builtin.get_url:
     url: curl -s -L "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
     dest: /tmp/frontend.zip
