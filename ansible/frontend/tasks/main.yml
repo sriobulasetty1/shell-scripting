@@ -1,3 +1,3 @@
 - name: Fromtend Server
   ansible.builtin.debug:
-    msg: FrontEnd
+  msg: FrontEnd
