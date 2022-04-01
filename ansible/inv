@@ -1,6 +1,7 @@
 #Jenkins  private IP address
 34.207.117.56
-
+#FrontEnd IP
+100.24.37.218
 # multiple servers
 #192.168.0.[10:20]
 
